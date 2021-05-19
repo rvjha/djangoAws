@@ -1,0 +1,53 @@
+{% extends '../init.html' %} {% block content %}
+<div class="box">
+	<form action="" id="regFrm" method="post" class="">
+		{% csrf_token %}
+		<h1 class="text-center">
+			Register
+			<span id="backToHome"><i class="fa fa-music text-info" aria-hidden="true"></i></span>
+		</h1>
+		<div class="text-center">
+			<h4 id="msg">
+
+			</h4>
+		</div>
+		<hr />
+		<div class="form-group">
+			<label for="">Name</label>
+			<input type="text" class="form-control" name="regName" id="regName" aria-describedby="helpId"
+				placeholder="Enter your name" required />
+			<small id="regNameErr" class="form-text "></small>
+		</div>
+		<div class="form-group">
+			<label for="">Email</label>
+			<input type="email" class="form-control" name="regEmail" id="regEmail" aria-describedby="emailHelpId"
+				placeholder="Enter your email" required />
+			<small id="regEmailErr" class="form-text "></small>
+		</div>
+		<div class="form-group">
+			<label for="">Password</label>
+			<input type="password" class="form-control" name="regPass" id="regPass" placeholder="Enter Password"
+				required />
+			<small id="regPassErr" class="form-text "></small>
+		</div>
+		<div class="form-group">
+			<label for="">Re Type Password</label>
+			<input type="password" class="form-control" name="regPass1" id="regPass1" placeholder="Enter Password"
+				required />
+			<small id="regPass1Err" class="form-text "></small>
+		</div>
+		<div class="row">
+			<div class="col">
+				<small class="float-left">
+					Already have an account
+					<a class="text-info pl-1" href="{% url 'login' %}"><b>Log In</b></a>
+				</small>
+			</div>
+			<div class="col">
+				<button type="submit" id="btnReg" class="btn float-right">Register</button>
+			</div>
+		</div>
+	</form>
+</div>
+
+{% endblock %}

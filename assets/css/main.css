@@ -1,0 +1,229 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+html,body{
+    height: 100%;
+    overflow: auto;
+    width: 100%;
+}
+.container{
+    height: 100%;
+}
+a{ 
+    color: #17A2B9!important;
+    font-weight: bold !important;
+}
+a:hover{
+    text-decoration:none;
+    font-weight: bolder;
+}
+
+/* banner */
+.banner{
+    background: url('../../static/images/banner.jpg') no-repeat;
+    background-position: center;
+    height: 300px;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    padding: 10px;
+}
+
+.banner h4{
+    margin: 155px;
+    color: pink;
+    text-align: center;
+    font-weight: bolder;
+    text-shadow:  1px 1px 5px #000;
+    position: relative;
+}
+
+
+.fa-music{
+    margin: auto;
+    animation: mymove 5s infinite;
+}
+
+@keyframes mymove {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
+    20% {transform: translateY(10px);} 
+    40% {transform: translateY(-30px);} 
+    60% {transform: translateY(-15px);} 
+}
+
+
+.bg{
+    background: url('../../static/images/banner.jpg') no-repeat;
+    background-position: center;
+    height: 300px;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+}
+.box{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 320px;
+    height: auto;
+    padding: 30px;
+    color: white;
+    border-radius: 10px;
+    box-shadow: inset 0 0 2000px rgba(0, 0, 0, 0.5);
+}
+
+.box h1{
+    font-family: 'Pacifico', cursive;
+}
+.box p small{
+    padding-top: 18px;
+}
+.box .btn{
+    background-color: #17A2B9!important;
+    color: white;
+    border: none;
+}
+.box .btn:hover{
+    background-color: white !important;
+    color: #17A2B9;
+}
+
+/* nav */
+nav{
+    width:100%;
+    background-image:url('../images/background.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 99;
+}
+
+.navbar-brand{
+    font-family: 'Pacifico', cursive;
+}
+
+#backToHome:hover{
+    cursor: pointer;
+}
+/*footer*/
+.col_white_amrc { 
+    color:#FFF;
+}
+footer {
+    width:100%;
+    height:200px;
+    position: relative;
+    bottom: 0;
+    margin-top: 100px;
+    background-image:url('../images/background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding:10px 0px 5px 0px ;
+}
+.pt2 {
+     padding-top:40px ;
+     margin-bottom:10px ;
+}
+footer p { 
+    font-size:13px;
+     color:#CCC; 
+    padding-bottom:0px; 
+    margin-bottom:8px;
+}
+.mb10 { 
+    padding-bottom:15px ;
+}
+.footer_ul_amrc { 
+    margin:0px ;
+     list-style-type:none ; 
+    font-size:14px;
+     padding:0px 0px 10px 0px ; 
+}
+.footer_ul_amrc li {
+    padding:0px 0px 5px 0px;
+}
+.footer_ul_amrc li a{ 
+    color:#CCC;
+}
+.footer_ul_amrc li a:hover{
+     color:#fff; 
+    text-decoration:none;
+}
+.fleft { 
+    float:left;
+}
+.padding-right { 
+    padding-right:10px;
+}
+
+.footer_ul2_amrc {
+    margin:0px; 
+    list-style-type:none; 
+    padding:0px;
+}
+.footer_ul2_amrc li p { 
+    display:table;
+ }
+
+.footer_ul2_amrc li i { 
+    margin-top:5px;
+}
+footer .container hr{
+    background-color:rgb(181, 183, 184);
+}
+
+.bottom_border { 
+    border-bottom:1px solid #323f45; 
+    padding-bottom:20px;
+}
+.foote_bottom_ul_amrc {
+	list-style-type:none;
+	padding:0px;
+	display:table;
+	margin-top: 10px;
+	margin-right: auto;
+	margin-bottom: 10px;
+	margin-left: auto;
+}
+.foote_bottom_ul_amrc li {
+     display:inline; 
+     text-align: center;
+}
+.foote_bottom_ul_amrc li a { 
+    color:#999; 
+    margin:0 12px;
+}
+
+.social_footer_ul {
+     margin:15px auto 0 -35px; 
+     list-style-type:none;  
+     text-align: center;
+    }
+.social_footer_ul li {
+    padding-top:10px; 
+    display: inline-block; 
+    margin: auto;
+}
+.social_footer_ul li a {
+     color:#CCC; 
+     border:1px solid #CCC; 
+     padding:8px; margin:auto; 
+     border-radius:50%;
+}
+.social_footer_ul li i {
+      width:20px; 
+      height:20px; 
+      text-align:center;
+}
+
+
+
+
+@media screen and (max-width: 540px) {
+    .box{
+        width: 100% !important;
+        box-shadow: none;
+    }
+}

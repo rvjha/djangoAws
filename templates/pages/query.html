@@ -1,0 +1,65 @@
+{% extends '../base.html' %} {% block content %}
+{% csrf_token %}
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<div class="text-left p-2 m-2">
+				<label for="">Name: </label>
+				<h3 class="text-success text-capitalize">{{user.uNm}}</h3>
+				<label for="">Email: </label>
+				<h6 class="text-success font-italic">{{user.uId}}</h6>
+			</div>
+		</div>
+		<div class="col">
+			<div class="m-auto p-4">
+				<h4 id="msg"></h4>
+			</div>
+		</div>
+	</div>
+	<div class="row p-2">
+		<div class="col">
+			<h2 class="text-info">Search:</h2>
+		</div>
+		<div class="col">
+			<div class="row text-right">
+				<input type="text" class="form-control" name="" id="queryArtist" aria-describedby="helpId"
+					placeholder="Enter Artist Name:" />
+			</div>
+		</div>
+		<div class="col searchBox">
+			<label class="form-check-label">
+				<div class="form-check">
+					<label class="form-check-label">
+						<input type="checkbox" class="form-check-input" name="" onclick="get_check()" id="getSong"
+							value="checkedValue">
+						Search with song name
+					</label>
+				</div>
+			</label>
+			<input type="text" class="form-control mb-1" name="" id="querySong" aria-describedby="helpId"
+				placeholder="Enger Song Titile:" />
+			<button type="submit" name="queryBtn" id="queryBtn" onclick="search_query()" class="btn-info form-control">
+				Search
+			</button>
+		</div>
+	</div>
+	<div class="row">
+		<table class="table table-dark m-auto">
+			<thead>
+				<tr class="text-center">
+					<th>S.No.</th>
+					<th>Title</th>
+					<th>Artist</th>
+					<th>Web Link</th>
+					<th>Image Link</th>
+					<th>Year</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			<tbody id="mainTable"></tbody>
+		</table>
+	</div>
+</div>
+<br />
+<br />
+{% endblock %}

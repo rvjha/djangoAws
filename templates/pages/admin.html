@@ -1,0 +1,86 @@
+{% extends '../base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="text-header">
+            <h1>
+                <a href="{% url 'profile' %}" class="text-capitalize"><i class="fa fa-user" aria-hidden="true"></i>
+                    <b>{{user.uNm}}</b>
+                </a>
+            </h1>
+            <hr>
+        </div>
+    </div>
+    {% csrf_token %}
+    <div class="row">
+        <div class="m-auto">
+            <h4 class="text-danger">
+                Admin functions
+                <hr>
+            </h4>
+        </div>
+        <div class="bt-danger">
+            <h5 class="text-left p-2" id="status"></h5>
+        </div>
+    </div>
+    <hr>
+    <div class="row m-auto p-2">
+        <div class="col text-left p-2">
+            <h4 for="" class="text-info">Create music class</h4>
+        </div>
+        <div class="col text-right p-2">
+            <button type="button" name="" id="createClassBtn" class="btn btn-primary m-1" btn-lg btn-block">Create
+                Class</button>
+        </div>
+    </div>
+    <hr>
+    <div class="row m-auto p-2">
+        <div class="col text-left p-2">
+            <h4 for="" class="text-info">Upload music</h4>
+        </div>
+        <div class="col text-right p-2">
+            <form action="" method="post" enctype="multipart/form-data">
+                <input type="file" name="musicJson" id="musicJsonFile">
+                <button type="submit" name="" id="uploadJsonBtn" class="btn btn-primary m-1" btn-lg btn-block">Upload Json
+                    data</button>
+            </form>
+        </div>
+    </div>
+    <hr>
+    <div class="row m-auto p-2">
+        <div class="col text-left p-2">
+            <h4 for="" class="text-info">Collect Images</h4>
+        </div>
+        <div class="col text-right p-2">
+            <button type="button" name="" id="createBucketBtn" class="btn btn-primary m-1" btn-lg btn-block">Create Bucket</button>
+            <button type="button" name="" id="collectImageBtn" class="btn btn-primary m-1" btn-lg btn-block">Collect
+                Images</button>
+        </div>
+    </div>
+    <hr>
+    <div class="row mt-4 p-2">
+        <div class="m-auto">
+            <h3 class="text-info">Users List</h3>
+        </div>
+        <div class="table">
+            <table class="table table-light">
+                <thead class="thead-light">
+                    <tr>
+                        <th class="text-left">S.no.</th>
+                        <th class="text-center">User Name</th>
+                        <th class="text-center">Email</th>
+                    </tr>
+                </thead>
+                <tbody id="UserTable">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="{% static 'js/ajax_calls.js' %}"></script>
+
+
+{% endblock %}
